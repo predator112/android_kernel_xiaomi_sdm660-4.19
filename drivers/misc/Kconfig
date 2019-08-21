@@ -554,6 +554,9 @@ config MEMORY_STATE_TIME
 config QPNP_MISC
 	tristate "QPNP Misc Peripheral"
 	depends on MFD_SPMI_PMIC
+
+config ANT_CHECK
+	tristate "ant check gpio"
 	help
 	  Say 'y' here to include support for the QTI QPNP MISC
 	  peripheral. The MISC peripheral holds the USB ID interrupt
