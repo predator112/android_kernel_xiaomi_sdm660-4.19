@@ -1508,7 +1508,7 @@ int32_t msm_sensor_driver_probe(void *setting,
 				reg_setting;
 		}
 		slave_info->sensor_id_info = slave_info32->sensor_id_info;
-#ifdef CONFIG_MACH_LONGCHEER
+#ifdef CONFIG_MACH_XIAOMI_SDM660
 		slave_info->vendor_id_info = slave_info32->vendor_id_info;
 		slave_info->vcm_id_info = slave_info32->vcm_id_info;
 #endif
@@ -1744,7 +1744,7 @@ int32_t msm_sensor_driver_probe(void *setting,
 			.sensor_id && !(strcmp(slave_info->sensor_name,
 			s_ctrl->sensordata->cam_slave_info->
 				sensor_id_info.sensor_id &&
-#ifdef CONFIG_MACH_LONGCHEER
+#ifdef CONFIG_MACH_XIAOMI_SDM660
 			slave_info->vendor_id_info.vendor_id ==
 			s_ctrl->sensordata->cam_slave_info->
 				vendor_id_info.vendor_id &&
@@ -1851,7 +1851,7 @@ CSID_TG:
 	s_ctrl->sensordata->actuator_name = slave_info->actuator_name;
 	s_ctrl->sensordata->ois_name = slave_info->ois_name;
 	s_ctrl->sensordata->flash_name = slave_info->flash_name;
-#ifdef CONFIG_MACH_LONGCHEER
+#ifdef CONFIG_MACH_XIAOMI_SDM660
 	s_ctrl->sensordata->vendor_id_info = &(slave_info->vendor_id_info);
 	s_ctrl->sensordata->vcm_id_info = &(slave_info->vcm_id_info);
 #endif
